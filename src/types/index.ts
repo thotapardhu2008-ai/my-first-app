@@ -53,6 +53,7 @@ export interface Job {
   costCredits: number;
   status: 'queued' | 'processing' | 'completed' | 'failed' | 'cancelled';
   progress: number;
+  currentStage?: JobStage['stage'];
   errorMessage?: string;
   createdAt: string;
   updatedAt: string;
