@@ -61,9 +61,9 @@ export function calculateJobCost(
   durationMinutes: number,
   targetLanguages: string[],
   voiceCloning: boolean = false,
-  qualityTier: keyof typeof QUALITY_TIERS = 'standard'
+  qualityTier: keyof typeof QUALITY_TIERS = 'STANDARD'
 ): number {
-  const qualityMultiplier = QUALITY_TIERS[qualityTier.toUpperCase() as keyof typeof QUALITY_TIERS].multiplier;
+  const qualityMultiplier = QUALITY_TIERS[qualityTier].multiplier;
 
   const asrCost = durationMinutes * CREDIT_COSTS.ASR_PER_MINUTE;
   const translationCost = durationMinutes * targetLanguages.length * CREDIT_COSTS.TRANSLATION_PER_MINUTE_PER_LANGUAGE;
