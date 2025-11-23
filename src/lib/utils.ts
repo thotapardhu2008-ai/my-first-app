@@ -82,9 +82,9 @@ export function calculateJobCost(
 export function estimateProcessingTime(
   durationMinutes: number,
   targetLanguages: number,
-  qualityTier: keyof typeof QUALITY_TIERS = 'standard'
+  qualityTier: keyof typeof QUALITY_TIERS = 'STANDARD'
 ): number {
-  const qualityMultiplier = QUALITY_TIERS[qualityTier.toUpperCase() as keyof typeof QUALITY_TIERS].multiplier;
+  const qualityMultiplier = QUALITY_TIERS[qualityTier].multiplier;
 
   // Base times in minutes (from constants)
   const baseTimes = {
