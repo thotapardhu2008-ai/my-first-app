@@ -66,7 +66,7 @@ export interface Job {
 export interface JobStage {
   stage: 'ingest' | 'asr' | 'translation' | 'tts' | 'sync' | 'final';
   status: 'pending' | 'processing' | 'completed' | 'error';
-  progress: number;
+  progress?: number;
   startedAt?: string;
   completedAt?: string;
   costCredits?: number;
