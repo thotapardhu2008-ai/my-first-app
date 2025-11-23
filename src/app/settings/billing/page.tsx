@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
-import { formatCredits, formatCurrency, formatRelativeTime } from '@/lib/utils';
+import { formatCredits, formatCurrency, formatRelativeTime, formatFileSize } from '@/lib/utils';
 import { CREDIT_PACKAGES, SUBSCRIPTION_PLANS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import type { CreditBalance, CreditTransaction, Subscription } from '@/types';
